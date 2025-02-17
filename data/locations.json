@@ -3000,8 +3000,8 @@
 				"Name": "Factory",
 				"Description": "The industrial estate and facilities of the chemical plant No.16 that were rented out illegally to the TerraGroup company. ",
 				"Scene": {
-					"path": "maps/factory_day_preset.bundle",
-					"rcid": "factory_day.scenespreset.asset"
+					"path": "maps/factory_preset.bundle",
+					"rcid": "factory.scenespreset.asset"
 				},
 				"Area": 0.9,
 				"RequiredPlayerLevel": 0,
