@@ -1,15 +1,14 @@
 {
-  "name": "EmuTarkov",
+  "name": "eftclassic_server",
   "version": "1.0.0",
-  "description": "EFT backend emu in suicide inducing language",
-  "author": "polivilas",
-  "main": "main.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/polivilas/EmuTarkov.git"
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "regedit": "^3.0.2"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "CC-BY-NC-SA-3.0"
+  "author": "",
+  "license": "ISC"
 }
