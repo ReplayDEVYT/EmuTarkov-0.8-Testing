@@ -26,7 +26,7 @@ function sendResponse(req, resp, body) {
 	}
 
 	// send response
-	resp.writeHead(200, "OK", {'Content-Type': 'text/plain', 'content-encoding' : 'deflate', 'Set-Cookie' : 'PHPSESSID=yolo'});
+	resp.writeHead(200, "OK", {'Content-Type': 'application/json', 'content-encoding' : 'deflate', 'Set-Cookie' : 'PHPSESSID=yolo'});
 	
 	zlib.deflate(output, function(err, buf) {
 		resp.end(buf);
