@@ -928,11 +928,6 @@
 			},
 			"Quests": [],
 			"TraderStandings": {},
-			"RagfairInfo": {
-				"rating": 133.7,
-				"isRatingGrowing": true,
-				"offers": []
-			},
 			"WishList": []
 		},
 		{
@@ -1861,11 +1856,6 @@
 			},
 			"Quests": [],
 			"TraderStandings": {},
-			"RagfairInfo": {
-				"rating": 133.7,
-				"isRatingGrowing": true,
-				"offers": []
-			},
 			"WishList": []
 		}
 	]

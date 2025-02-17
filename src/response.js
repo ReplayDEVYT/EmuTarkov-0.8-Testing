@@ -3,7 +3,6 @@
 var utility = require('./utility.js');
 var settings = require('./settings.js');
 var item = require('./item.js');
-var ragfair = require('./ragfair.js');
 var bots = require('./bots.js');
 
 var retry = new RegExp('/?retry=\d+', 'i');
@@ -177,7 +176,6 @@ function get(req, body, url) {
 							Trading: backendUrl,
 							Messaging: backendUrl,
 							Main: backendUrl,
-							RagFair: backendUrl
 						},
 						utc_time: 1337,
 						totalInGame: 0,
@@ -260,10 +258,6 @@ function get(req, body, url) {
 
 		case "/client/server/list":
 			output = '{"err":0, "errmsg":null, "data":[{"ip":"'+ ip +'", "port":"' + port + '"}]}';
-			break;
-
-		case "/client/ragfair/search":
-			output = ragfair.getOffers(info);
 			break;
 
 		case "/client/match/available":

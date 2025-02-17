@@ -345,29 +345,12 @@ function confirmTrading(tmpList, body)  {
 	return "";
 }
 
-function confirmRagfairTrading(tmpList , body) {
-	body.Action = "TradingConfirm";
-	body.type = "buy_from_trader";
-	body.tid = "everythingTrader";
-	body.item_id = body.offerId;
-	body.scheme_id = 0;
-	body.scheme_items = body.items;
-
-	var res = confirmTrading(tmpList, body);
-
-	if (res == "OK" ) {
-		return "OK";
-	} else {
-		return "error";
-	}
-}
-
 function getOutput() {
 	return output;
 }
 
 function resetOutput() {
-	output = JSON.parse('{"err":0, "errmsg":null, "data":{"items":{"new":[], "change":[], "del":[]}, "badRequest":[], "quests":[], "ragFairOffers":[]}}');
+	output = JSON.parse('{"err":0, "errmsg":null, "data":{"items":{"new":[], "change":[], "del":[]}, "badRequest":[], "quests":[]}}');
 }
 
 function handleMoving(body) {
@@ -402,9 +385,6 @@ function handleMoving(body) {
             
 		case "TradingConfirm":
 			return confirmTrading(tmpList, body);
-
-		case "RagFairBuyOffer":
-			return confirmRagfairTrading(tmpList, body);
 
 		default:
 			console.log("UNHANDLED ACTION");
