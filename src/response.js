@@ -158,9 +158,34 @@ function get(req, body, url) {
 			output = '{"err":0, "errmsg":null, "data":null}';
 			break;
 
-		case "/client/game/login":
-			output = '{"err":0, "errmsg":null, "data":{"token":"token_1337", "aid":1337, "lang":"en", "languages":{"en":"English"}, "ndaFree":true, "queued":false, "taxonomy":341, "activeProfileId":"5c71b934354682353958e984", "backend":{"Trading":"' + backendUrl + '", "Messaging":"' + backendUrl + '", "Main":"' + backendUrl + '", "RagFair":"' + backendUrl + '"}, "utc_time":1337, "totalInGame":0, "twitchEventMember":false}}';
-			break;
+			case "/client/game/login":
+				output = JSON.stringify({
+					err: 0,
+					errmsg: null,
+					data: {
+						token: "token_1337",
+						aid: 1337,
+						lang: "en",
+						languages: [
+							{ code: "en", name: "English" }
+						],
+						ndaFree: true,
+						queued: false,
+						taxonomy: 266,
+						activeProfileId: "5c71b934354682353958e984",
+						backend: {
+							Trading: backendUrl,
+							Messaging: backendUrl,
+							Main: backendUrl,
+							RagFair: backendUrl
+						},
+						utc_time: 1337,
+						totalInGame: 0,
+						twitchEventMember: false
+					}
+				});
+				break;
+			
 
 		case "/client/game/logout":
 			output = '{"err":0, "errmsg":null, "data":null}';
