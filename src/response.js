@@ -129,10 +129,30 @@ function get(req, body, url) {
 		case "/client/languages":
 			output = '{"err":0, "errmsg":null, "data":[{"ShortName":"en", "Name":"English"}, {"ShortName":"ru", "Name":"Русский"}], "crc":0}';
 
-		case "/client/menu/locale/en":
-		case "/client/menu/locale/ru":
-			output = '{"err":0, "errmsg":null, "data":{"menu":{"NEXT":"NEXT", "Escape from Tarkov":"ESCAPE FROM TARKOV", "Servers are currently at full capacity":"Servers are currently at full capacity", "EXIT":"EXIT", "REMEMBER ACCOUNT":"REMEMBER ACCOUNT", "AUTHORIZATION":"AUTHORIZATION", "Profile data loading...":"Profile data loading...", "{0} Beta version":"{0} Beta version | EmuTarkov", "DOWN: ":"DOWN: ", "LEFT: ":"LEFT: ", "RIGHT: ":"RIGHT: "}}, "crc":0}';
-			break;
+			case "/client/menu/locale/en":
+				case "/client/menu/locale/ru":
+					output = JSON.stringify({
+						err: 0,
+						errmsg: null,
+						data: {
+							menu: {
+								"NEXT": "NEXT",
+								"Escape from Tarkov": "ESCAPE FROM TARKOV",
+								"Servers are currently at full capacity": "Servers are currently at full capacity",
+								"EXIT": "EXIT",
+								"REMEMBER ACCOUNT": "REMEMBER ACCOUNT",
+								"AUTHORIZATION": "AUTHORIZATION",
+								"Profile data loading...": "Profile data loading...",
+								"{0} Beta version": "{0} Beta version | fartgart",
+								"DOWN: ": "DOWN: ",
+								"LEFT: ": "LEFT: ",
+								"RIGHT: ": "RIGHT: "
+							}
+						},
+						crc: 0
+					});
+					break;
+				
 
 		case "/client/game/version/validate":
 			output = '{"err":0, "errmsg":null, "data":null}';

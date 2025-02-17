@@ -13,7 +13,7 @@ function sendResponse(req, resp, body) {
 	if (req.method == "POST") {
 		output = response.get(req, body.toString(), req.url);
 	} else {
-		output = response.get(req, "{}", req.url);
+		output = response.get(req, "{}", req.url, resp);
 	}
 
 	// redirect
