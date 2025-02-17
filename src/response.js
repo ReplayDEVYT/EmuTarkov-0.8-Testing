@@ -279,7 +279,30 @@ function get(req, body, url) {
 			break;
 
 		case "/client/chatServer/list":
-			output = '{"err":0, "errmsg":null, "data":[{"_id":"5ae20a0dcb1c13123084756f", "RegistrationId":20, "DateTime":' + Math.floor(new Date() / 1000) + ', "IsDeveloper":true, "Regions":["EUR"], "VersionId":"bgkidft87ddd", "Ip":"", "Port":0, "Chats":[{"_id":"0", "Members":0}]}]}';
+			// Actually lets do stringified JSON
+			output = JSON.stringify({
+				err: 0,
+				errmsg: null,
+				data: [
+					{
+						_id: "5ae20a0dcb1c13123084756f",
+						RegistrationId: 20,
+						DateTime: "1970-01-01T00:00:00Z",
+						IsDeveloper: true,
+						Regions: ["EUR"],
+						VersionId: "bgkidft87ddd",
+						Ip: "",
+						Port: 0,
+						Chats: [
+							{
+								_id: "0",
+								Members: 0
+							}
+						]
+					}
+				]
+			});
+				
 			break;
 
 		case "/client/game/profile/nickname/change":
