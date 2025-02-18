@@ -1,4 +1,4 @@
 export interface IResourceKey {
-	path: string;
-	rcid: string;
+	path: string | null;
+	rcid: string | null;
 }

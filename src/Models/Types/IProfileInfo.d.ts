@@ -1,6 +1,7 @@
 import { MemberCategory } from "../Enums/MemberCategory";
 import { PlayerSide } from "../Enums/PlayerSide";
 import { Voice } from "../Enums/Voice";
+import { WildSpawnType } from "../Enums/WildSpawnType";
 
 export interface IProfileInfo {
 	Nickname: string;
@@ -16,9 +17,9 @@ export interface IProfileInfo {
 	lockedMoveCommands: boolean;
 	LastTimePlayedAsSavage: number;
 	Settings: {
-		Role: string;
-		BotDifficulty: string;
-		Experience: number;
+		Role?: keyof typeof WildSpawnType;
+		BotDifficulty?: string;
+		Experience?: number;
 	};
 	NeedWipe: boolean;
 	GlobalWipe: boolean;

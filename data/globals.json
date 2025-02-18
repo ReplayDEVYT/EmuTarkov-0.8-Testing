@@ -1,7 +1,4 @@
 {
-  "err": 0,
-  "errmsg": null,
-  "data": {
     "config": {
       "content": {
         "ip": "",
@@ -5471,5 +5468,4 @@
         "_encyclopedia": "5ac66d9b5acfc4001633997a"
       }
     }
-  }
 }
