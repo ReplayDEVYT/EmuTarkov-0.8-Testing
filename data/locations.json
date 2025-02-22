@@ -2493,9 +2493,16 @@
 			],
 			"Banners": [
 				{
-					"id": "5464e0404bdc2d2a708b4567",
+					"id": "5464e0454bdc2d06708b4567",
 					"pic": {
-						"path": "CONTENT/banners/banner_usec.jpg",
+						"path": "CONTENT/banners/banner_bear.jpg",
+						"rcid": ""
+					}
+				},
+				{
+					"id": "5c1b857086f77465f465faa4",
+					"pic": {
+						"path": "CONTENT/banners/banner_scavraider.jpg",
 						"rcid": ""
 					}
 				}
